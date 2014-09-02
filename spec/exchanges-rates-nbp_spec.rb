@@ -1,5 +1,7 @@
 require 'spec_helper'
 
 RSpec.describe Exchanges::Rates::Nbp do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it 'responds to constant NBP_URL' do
+    expect(Exchanges::Rates::Nbp::NBP_URL).to be
+  end
 end
