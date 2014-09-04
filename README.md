@@ -1,6 +1,6 @@
 # Exchanges::Rates::Nbp
 
-TODO: Write a gem description
+Simbple gem that gets exchange rates from the Polish National Bank.
 
 ## Installation
 
