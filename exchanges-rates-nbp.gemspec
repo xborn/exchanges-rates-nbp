@@ -1,11 +1,12 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'exchanges/rates/nbp/version'
+
+require 'exchanges/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "exchanges-rates-nbp"
-  spec.version       = Exchanges::Rates::Nbp::VERSION
+  spec.name          = "exchanges-nbp"
+  spec.version       = Exchanges::VERSION
   spec.authors       = ["kwieslawski"]
   spec.email         = ["kwieslawski@electrum.pl"]
   spec.summary       = %q{TODO: Write a short summary. Required.}
