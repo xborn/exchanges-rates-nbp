@@ -49,18 +49,24 @@ RSpec.describe Exchanges::Parsing do
     end
   end
 
-  describe '.currency_codes' do
+  describe '.codes' do
     it 'returns array' do
-      expect(Exchanges::Parsing.currency_codes).to be_kind_of(Array)      
+      expect(Exchanges::Parsing.codes).to be_kind_of(Array)
     end
   end
 
-  describe '.currency_info' do
+  describe '.rates' do
   	it 'returns Hash contained necessary informations' do
-      expect(Exchanges::Parsing.currency_info('USD')).to be_kind_of(Hash)
+      expect(Exchanges::Parsing.rates('USD')).to be_kind_of(Hash)
   	end
   	it 'Hash contains keys :symbol, :name, :base, :average_rate' do
-  		expect(Exchanges::Parsing.currency_info('USD').keys.sort).to eq [:average_rate, :base, :name, :symbol]
+  		expect(Exchanges::Parsing.rates('USD').keys.sort).to eq [:average_rate, :base, :name, :symbol]
+    end
+  end
+
+  describe '.published_at' do
+    it 'returns Date' do
+      expect(Exchanges::Parsing.published_at).to be_kind_of(Date)
     end
   end
 end
