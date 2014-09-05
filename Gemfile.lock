@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    exchanges-nbp (0.0.1)
+    exchanges-rates-nbp (0.0.1)
 
 GEM
   remote: https://rubygems.org/
@@ -157,7 +157,7 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 1.6)
   childprocess
-  exchanges-nbp!
+  exchanges-rates-nbp!
   guard-livereload
   guard-rspec
   guard-spork
