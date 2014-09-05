@@ -7,10 +7,10 @@ require 'exchanges/version'
 Gem::Specification.new do |spec|
   spec.name          = "exchanges-nbp"
   spec.version       = Exchanges::VERSION
-  spec.authors       = ["kwieslawski"]
-  spec.email         = ["kwieslawski@electrum.pl"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.authors       = ["krzysztof.wieslawski"]
+  spec.email         = ["krzysztof.wieslawski@gmail.com"]
+  spec.summary       = %q{Gem to retrieve exchange rates from the Polish National Bank (NBP)}
+  spec.description   = %q{}
   spec.homepage      = ""
   spec.license       = "MIT"
 
