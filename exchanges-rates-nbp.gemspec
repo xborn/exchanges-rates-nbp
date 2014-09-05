@@ -5,7 +5,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'exchanges/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "exchanges-nbp"
+  spec.name          = "exchanges-rates-nbp"
   spec.version       = Exchanges::VERSION
   spec.authors       = ["krzysztof.wieslawski"]
   spec.email         = ["krzysztof.wieslawski@gmail.com"]
