@@ -1,2 +1,2 @@
 require 'exchanges/version'
-require 'exchanges/parsing'
+require 'exchanges/rates'

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    exchanges-rates-nbp (0.0.2)
+    exchanges-rates-nbp (0.0.3)
 
 GEM
   remote: https://rubygems.org/

@@ -5,7 +5,7 @@ require 'open-uri'
 require 'nokogiri'
 
 module Exchanges
-  module Parsing
+  module Rates
     NBP = 'http://www.nbp.pl/kursy/xml/'
 
     @@date = Date.today
@@ -23,12 +23,12 @@ module Exchanges
     end
 
     def self.rates(currency)
-      info = {}
-      info[:symbol] = xml.xpath("//pozycja[kod_waluty='#{currency}']/kod_waluty/text()").to_s
-      info[:name] = xml.xpath("//pozycja[kod_waluty='#{currency}']/nazwa_waluty/text()").to_s
-      info[:base] = xml.xpath("//pozycja[kod_waluty='#{currency}']/przelicznik/text()").to_s
-      info[:average_rate] = xml.xpath("//pozycja[kod_waluty='#{currency}']/kurs_sredni/text()").to_s
-      info
+      rate = {}
+      rate[:symbol] = xml.xpath("//pozycja[kod_waluty='#{currency}']/kod_waluty/text()").to_s
+      rate[:name] = xml.xpath("//pozycja[kod_waluty='#{currency}']/nazwa_waluty/text()").to_s
+      rate[:base] = xml.xpath("//pozycja[kod_waluty='#{currency}']/przelicznik/text()").to_s
+      rate[:average_rate] = xml.xpath("//pozycja[kod_waluty='#{currency}']/kurs_sredni/text()").to_s.gsub(',', '.').to_f
+      rate
     end
 
     def self.published_at
