@@ -1,6 +1,6 @@
 # Exchanges::Rates::Nbp
 
-Simbple gem that gets exchange rates from the Polish National Bank.
+Simple gem that gets exchange rates from the Polish National Bank.
 
 ## Installation
 
@@ -18,7 +18,35 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Default usage:
+
+		nbp = Exchange::Import.new(nil, nil)
+
+,parameters:
+date - default Date.today, you can pass another valid date
+args - optional parameters
+
+Class instance has three important methods:
+#codes - returns currency symbols from table
+#published_at - returns publication date exchange rates
+#rates(currency) - returns currency rate at indicated date
+
+
+If you interested only selected currencies at indicated day use in this way:
+
+		nbp = Exchange::Import.new(Date.today - 3, {selected_currencies: ['USD', 'EUR']})
+
+Now you can retrieve currency rates for chosen:
+
+    nbp.codes.each do |c|
+      nbp.rates(c)
+    end
+
+
+## Future ideas
+1. Currency and CurrencyRate model, Sequel/ActiveRecord migration
+2. Background job to retrieve currency rates automatically
+
 
 ## Contributing
 

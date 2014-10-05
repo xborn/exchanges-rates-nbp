@@ -1,7 +1,8 @@
 require 'rubygems'
 require 'bundler/setup'
 
-require 'nbp'
+require 'exchanges/rates'
+require 'exchanges/import'
 
 RSpec.configure do |config|
 
