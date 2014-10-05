@@ -23,13 +23,18 @@ Default usage:
 		nbp = Exchange::Import.new(nil, nil)
 
 ,parameters:
+
 date - default Date.today, you can pass another valid date
+
 args - optional parameters
 
 Class instance has three important methods:
-#codes - returns currency symbols from table
-#published_at - returns publication date exchange rates
-#rates(currency) - returns currency rate at indicated date
+
+codes - returns currency symbols from table,
+
+published_at - returns publication date exchange rates,
+
+rates(currency) - returns currency rate at indicated date
 
 
 If you interested only selected currencies at indicated day use in this way:
