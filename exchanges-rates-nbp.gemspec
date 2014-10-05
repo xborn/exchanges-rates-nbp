@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["krzysztof.wieslawski@gmail.com"]
   spec.summary       = %q{Gem to retrieve exchange rates from the Polish National Bank (NBP)}
   spec.description   = %q{}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/xborn/exchanges-rates-nbp"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
