@@ -26,7 +26,8 @@ Default usage:
 
 date - default Date.today, you can pass another valid date
 
-args - optional parameters
+args - optional parameters 
+
 
 Class instance has three important methods:
 
