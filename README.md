@@ -20,7 +20,7 @@ Or install it yourself as:
 
 Default usage:
 
-		nbp = Exchange::Import.new(nil, nil)
+		nbp = Exchange::Nbp.new(nil, nil)
 
 ,parameters:
 
@@ -40,7 +40,7 @@ Class instance has three important methods:
 
 If you interested only selected currencies at indicated day use in this way:
 
-		nbp = Exchange::Import.new(Date.today - 3, {selected_currencies: ['USD', 'EUR']})
+		nbp = Exchange::Nbp.new(Date.today - 3, {selected_currencies: ['USD', 'EUR']})
 
 Now you can retrieve currency rates for chosen:
 
