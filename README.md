@@ -24,23 +24,24 @@ Default usage:
 
 ,parameters:
 
-- date - default Date.today, you can pass another valid date
+* date - default Date.today, you can pass another valid date
 
-- args - optional parameters 
+* args - optional parameters 
 
 
 Class instance has three important methods:
 
-- codes - returns currency symbols from table,
+* codes - returns currency symbols from table,
 
-- published_at - returns publication date exchange rates,
+* published_at - returns publication date exchange rates,
 
-- rates(currency) - returns currency rate at indicated date
+* rates(currency) - returns currency rate at indicated date
 
 
 If you interested only selected currencies at indicated day use in this way:
 
 		nbp = Exchange::Nbp.new(Date.today - 3, {selected_currencies: ['USD', 'EUR']})
+
 
 Now you can retrieve currency rates for chosen:
 
