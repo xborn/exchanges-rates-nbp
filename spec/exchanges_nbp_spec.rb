@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-RSpec.describe ExchangesRatesNbp do
+RSpec.describe Exchanges::Nbp do
 
   before(:all) do
-    @dummy = ExchangesRatesNbp.new(nil, nil)
+    @dummy = Exchanges::Nbp.new(nil, nil)
   end
 
   context 'when date is not passed' do
@@ -14,7 +14,7 @@ RSpec.describe ExchangesRatesNbp do
 
   context 'when date is passed e.g. \'2014-08-31\'' do
     before(:all) do
-      @dummy = ExchangesRatesNbp.new(Date.new(2014,8,31), nil)
+      @dummy = Exchanges::Nbp.new(Date.new(2014,8,31), nil)
     end
 
     it 'returns @date equal Date.today' do
@@ -24,7 +24,7 @@ RSpec.describe ExchangesRatesNbp do
 
   context 'when two valid currencies are chosen' do
     before(:all) do
-      @dummy = ExchangesRatesNbp.new(nil, {selected_currencies: ['USD','EUR']})
+      @dummy = Exchanges::Nbp.new(nil, {selected_currencies: ['USD','EUR']})
     end
 
     it '#codes returns 2-elements Array' do
@@ -35,7 +35,7 @@ RSpec.describe ExchangesRatesNbp do
 
   context 'when any currencies are selected at \'2014-08-31\'' do
     before(:all) do
-      @dummy = ExchangesRatesNbp.new(nil, nil)
+      @dummy = Exchanges::Nbp.new(nil, nil)
     end
 
     it '#codes returns 36-elements Array' do
