@@ -4,3 +4,4 @@
 1.0.0	selected currencies, creating class to retrieve currency rates
 1.0.2 best practices according to http://guides.rubygems.org/
 1.0.3 CHANGELOG, README
+1.0.4 the base value of currency should be a number
