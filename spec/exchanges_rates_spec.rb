@@ -63,6 +63,9 @@ RSpec.describe Exchanges::Rates do
       it 'Hash contains keys :symbol, :name, :base, :average_rate' do
         expect(@dummy.rates('USD').keys.sort).to eq [:average_rate, :base, :name, :symbol]
       end
+      it 'base is a Float' do
+        expect(@dummy.rates('USD')[:base]).to be_kind_of(Float)
+      end
       it 'rate is a Float' do
         expect(@dummy.rates('USD')[:average_rate]).to be_kind_of(Float)
       end

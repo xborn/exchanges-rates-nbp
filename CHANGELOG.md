@@ -5,3 +5,4 @@
 1.0.2 best practices according to http://guides.rubygems.org/
 1.0.3 CHANGELOG, README
 1.0.4 the base value of currency should be a number
+1.0.5 bug - base value of currency, tests
