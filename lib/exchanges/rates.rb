@@ -19,7 +19,7 @@ module Exchanges
     def rates(currency)
       rate = {}
       rate[:symbol] = xml.xpath("//pozycja[kod_waluty='#{currency}']/kod_waluty/text()").to_s
-      rate[:name] = xml.xpath("//pozycja[kod_waluty='#{currency}']/nazwa_waluty/text()").to_s
+      rate[:name] = xml.xpath("//pozycja[kod_waluty='#{currency}']/nazwa_waluty/text()").to_s.force_encoding('iso-8859-2').encode('utf-8')
       rate[:base] = xml.xpath("//pozycja[kod_waluty='#{currency}']/przelicznik/text()").to_s.gsub(',', '.').to_f
       rate[:average_rate] = xml.xpath("//pozycja[kod_waluty='#{currency}']/kurs_sredni/text()").to_s.gsub(',', '.').to_f
       rate

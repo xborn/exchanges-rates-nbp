@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    exchanges-rates-nbp (1.0.5)
+    exchanges-rates-nbp (1.0.6)
       nokogiri (~> 1.6)
 
 GEM
